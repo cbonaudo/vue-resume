@@ -1,0 +1,44 @@
+<template>
+
+  <div class="languages component">
+    <h2>Languages</h2>
+    <div class="component-content">
+      <div id="mask"></div>
+      <table>
+        <tr v-for="language in languages" :key="language.id">
+          <td><img class="icon" v-bind:src="getIcon(language.icon)"></td>
+          <td class="content">
+            <div><span  class="title">{{ language.title }}</span> : {{ language.rating }}</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: 'Languages',
+  methods: {
+    getIcon(path) {
+      const images = require.context('../assets/languages');
+      return images(`./${path}.png`);
+    },
+  },
+  data() {
+    return {
+      languages: [
+        { title: 'French', rating: 'Native', icon: 'french' },
+        { title: 'English', rating: 'Fluent', icon: 'english' },
+        { title: 'Spanish', rating: 'Intermediate', icon: 'spanish' },
+        { title: 'German', rating: 'Basic', icon: 'german' },
+        { title: 'French Sign Language', rating: 'Basic', icon: 'FSL' },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+</style>
