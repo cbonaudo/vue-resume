@@ -1,6 +1,16 @@
 # my-cv
 
-> a curriculum vitae with vueJS
+A curriculum vitae with vueJS
+More features and responsiveness coming soon !
+
+You can take the template and fill it with your own informations on /src :
+- /Assets contain all the logos and images (taken and adapted from https://material.io/tools/icons/)
+- Global.vue contain the css for the whole resume if you need to modify something
+- In /components are each part of the resume as a component, with the informations, the link to images/logos
+ 
+ Don't hesitate to contact me for anything, about this app or something else at cedricbonaudo@gmail.com
+ 
+ 
 
 ## Build Setup
 
