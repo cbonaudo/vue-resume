@@ -8,3 +8,7 @@ describe('Contact.vue', () => {
     expect(vm.$el.querySelector('h1').textContent).toEqual('Contact Me');
   });
 });
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(1 + 2).toBe(3);
+});
