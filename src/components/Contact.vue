@@ -1,12 +1,13 @@
 <template>
-
   <div class="contact component">
     <h2>Contact Me</h2>
     <div class="component-content">
       <div id="mask"></div>
       <table>
         <tr v-for="contact in contacts" :key="contact.id">
-          <td><img class="icon" v-bind:src="getIcon(contact.icon)"></td>
+          <td>
+            <img class="icon" v-bind:src="getIcon(contact.icon)" />
+          </td>
           <td class="content">
             <div v-for="content in contact.contents" :key="content.id">{{ content }}</div>
           </td>
@@ -14,7 +15,6 @@
       </table>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -32,8 +32,7 @@ export default {
         { contents: ['8 Quai Jules Courmont', 'Lyon 02, France'], icon: 'address' },
         { contents: ['06.95.36.70.43'], icon: 'phone' },
         { contents: ['cedricbonaudo@gmail.com'], icon: 'email' },
-        { contents: ['@CBonaudo'], icon: 'twitter' },
-        { contents: ['http://cbonaudo.io/'], icon: 'www' },
+        { contents: ['http://github.com/cbonaudo/'], icon: 'www' },
       ],
     };
   },

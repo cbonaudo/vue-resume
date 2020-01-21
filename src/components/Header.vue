@@ -1,17 +1,18 @@
 <template>
-
   <div class="header component">
+    <img src="../assets/cedric.jpg" />
 
-    <img src="../assets/cedric.jpg">
+    <h1>
+      <span class="name">Cedric Bonaudo</span>
+      <br />
+      <span class="job-title">Javascript Developer</span>
+    </h1>
 
-    <h1><span class="name">Cedric Bonaudo</span> <br><span class="job-title">Web Developer
-      <br>Fullstack Javascript</span></h1>
-
-    <h3 class="quote">Working with people to build helpful and complex applications,
-      while perfecting my knowledge of Javascript and its ecosystem.</h3>
-
+    <h3 class="quote">
+      Working with people to build helpful and complex applications,
+      while perfecting my knowledge of Javascript and its ecosystem.
+    </h3>
   </div>
-
 </template>
 
 <script>
@@ -25,7 +26,7 @@ export default {
 .header {
   display: grid;
   grid-template-columns: 38% auto;
-  grid-template-row: 50% auto;
+  grid-template-rows: 50% auto;
   height: 290px;
   text-align: left;
 }

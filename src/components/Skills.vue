@@ -1,15 +1,17 @@
 <template>
-
   <div class="skills component">
     <h2>Main Skills</h2>
     <div class="component-content">
       <div id="mask"></div>
       <ul v-for="skill in skills" :key="skill.id">
-        <li><span class="title">{{ skill.categorie }} :</span><br>{{ skill.content }}</li>
+        <li>
+          <span class="title">{{ skill.categorie }} :</span>
+          <br />
+          {{ skill.content }}
+        </li>
       </ul>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -22,9 +24,10 @@ export default {
           categorie: 'Functional',
           content: 'Teamwork, Organisation, Reassessment, Teaching, Learning',
         },
-        { categorie: 'Javascript', content: 'React, Vue, Node, Express, Jest' },
-        { categorie: 'Practices', content: 'Agile, SOLID, TDD' },
-        { categorie: 'Miscellaneous', content: 'CSS, Git, MongoDB, mySQL, Ubuntu' },
+        { categorie: 'Javascript', content: 'Angular, Vue, Node, React, Express, Jest' },
+        { categorie: 'Practices', content: 'Agile (Scrum, Kanban), SOLID, TDD' },
+        { categorie: 'CI/CD', content: 'Github, Gitlab, CircleCI' },
+        { categorie: 'Databases', content: 'MySQL, MongoDB, ElasticSearch' },
       ],
     };
   },

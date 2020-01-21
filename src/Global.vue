@@ -1,7 +1,5 @@
 <template>
-
-  <div class='global'>
-
+  <div class="global">
     <Header></Header>
     <Contact></Contact>
     <Experiences></Experiences>
@@ -9,9 +7,7 @@
     <Languages></Languages>
     <Formations></Formations>
     <Interests></Interests>
-
   </div>
-
 </template>
 
 <script>
@@ -121,6 +117,7 @@ body {
 
 /* Tables and their rows/cells */
 table {
+  width: 100%;
   margin-top: 2.5%;
   margin-bottom: 5%;
 }
