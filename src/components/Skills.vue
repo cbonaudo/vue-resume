@@ -27,7 +27,7 @@ export default {
           },
           { categorie: "Javascript", content: "Angular, Vue, Node, React, Express, Jest" },
           { categorie: "Practices", content: "Agile (Scrum, Kanban), SOLID, TDD" },
-          { categorie: "CI/CD", content: "Github, Gitlab, CircleCI" },
+          { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
           { categorie: "Databases", content: "MySQL, MongoDB, ElasticSearch" },
         ],
         FR: [
@@ -38,7 +38,7 @@ export default {
           },
           { categorie: "Javascript", content: "Angular, Vue, Node, React, Express, Jest" },
           { categorie: "Pratiques", content: "Agile (Scrum, Kanban), SOLID, TDD" },
-          { categorie: "CI/CD", content: "Github, Gitlab, CircleCI" },
+          { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
           { categorie: "Bases de données", content: "MySQL, MongoDB, ElasticSearch" },
         ],
       },
