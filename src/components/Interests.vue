@@ -1,10 +1,11 @@
 <template>
   <div class="interests component">
-    <h2>Interests</h2>
+    <!-- <h2>Interests</h2> -->
+    <h2>Hobbies</h2>
     <div class="component-content">
       <div id="mask"></div>
       <table>
-        <tr v-for="interest in interests" :key="interest.id">
+        <tr v-for="interest in interests.FR" :key="interest.id">
           <td>
             <img class="icon" v-bind:src="getIcon(interest.icon)" />
           </td>
@@ -19,22 +20,31 @@
 
 <script>
 export default {
-  name: 'Interests',
+  name: "Interests",
   methods: {
     getIcon(path) {
-      const images = require.context('../assets/interests');
+      const images = require.context("../assets/interests");
       return images(`./${path}.png`);
     },
   },
   data() {
     return {
-      interests: [
-        { contents: ['Music : Bass, Guitar, Piano, Saxophone'], icon: 'music' },
-        { contents: ['Bike, Running'], icon: 'bike' },
-        { contents: ['Cooking'], icon: 'cooking' },
-        { contents: ['Language Learning'], icon: 'language' },
-        { contents: ['Video Games'], icon: 'games' },
-      ],
+      interests: {
+        EN: [
+          { contents: ["Music : Bass, Guitar, Piano, Saxophone"], icon: "music" },
+          { contents: ["Bike, Running"], icon: "bike" },
+          { contents: ["Cooking"], icon: "cooking" },
+          { contents: ["Language Learning"], icon: "language" },
+          { contents: ["Video Games"], icon: "games" },
+        ],
+        FR: [
+          { contents: ["Musique : Bass, Guitar, Piano, Saxophone"], icon: "music" },
+          { contents: ["Vélo, Course"], icon: "bike" },
+          { contents: ["Cuisine"], icon: "cooking" },
+          { contents: ["Langues"], icon: "language" },
+          { contents: ["Jeux Vidéos"], icon: "games" },
+        ],
+      },
     };
   },
 };

@@ -5,19 +5,24 @@
     <h1>
       <span class="name">Cedric Bonaudo</span>
       <br />
-      <span class="job-title">Javascript Developer</span>
+      <!-- <span class="job-title">Javascript Developer</span> -->
+      <span class="job-title">Développeur Javascript</span>
     </h1>
 
-    <h3 class="quote">
+    <!-- <h3 class="quote">
       Working with people to build helpful and complex applications,
       while perfecting my knowledge of Javascript and its ecosystem.
+    </h3>-->
+    <h3 class="quote">
+      Travailler en équipe pour construire des applications complexes et utiles,
+      tout en améliorant mes connaissances de Javascript et de son écosystème.
     </h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
 };
 </script>
 
