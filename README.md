@@ -9,8 +9,10 @@ You can take the template and fill it with your own informations on /src :
 - In /components are each part of the resume as a component, with the informations, the link to images/logos
  
  Don't hesitate to contact me for anything, about this app or something else at cedricbonaudo@gmail.com
- 
- 
+
+# Deploy 
+
+Before committing, build (npm run build) the project (output: docs folder) and commit the files with it.
 
 ## Build Setup
 

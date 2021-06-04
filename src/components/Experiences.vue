@@ -63,6 +63,28 @@ export default {
         ],
         FR: [
           {
+            place: "Bedrock",
+            title: "Développeur Javascript",
+            date: "Mars 2020 - ...",
+            contents: [
+              "Creation et Maintenance d'applications backoffice pour la plate-forme Salto et 6play (VueJS)",
+              "Focus sur la résilience et la réutilisabilité, via Tests fonctionnels, Documentation, Design System, Accessibilité, Responsiveness & Montée de version",
+              "Création de scripts et de packages (NodeJS, Github, Slack)",
+              "Environnement Agile/Scrum et Animation de rétrospectives"
+            ],
+          },
+          {
+            place: "IOmentum",
+            title: "Développeur Rust",
+            date: "Février 2020 - ...",
+            contents: [
+              "Création et Maintenance d'une plate-forme de E-commerce (Rust, ReactJS)",
+              "Mise en place d'architecture hexagonale et de Domain Driven Design (Rust)",
+              "Support et conseils aux développeurs juniors",
+              "Développement de plusieurs applications : Mots-croisés, Backoffices (Rust, ReactJS)",
+            ],
+          },
+          {
             place: "Uplab",
             title: "Développeur Web Fullstack",
             date: "Novembre 2019 - Février 2020",

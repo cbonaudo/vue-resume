@@ -36,10 +36,12 @@ export default {
             content:
               "Travail d'Equipe, Organisation, Remise en question, Enseignement, Apprentissage",
           },
-          { categorie: "Javascript", content: "Angular, Vue, Node, React, Express, Jest" },
-          { categorie: "Pratiques", content: "Agile (Scrum, Kanban), SOLID, TDD" },
+          { categorie: "Rust", content: "Tokio, Bastion, Warp, Async-graphql" },
+          { categorie: "Javascript", content: "Vue, React, Jest, Node, Express" },
+          { categorie: "Architecture", content: "Rest, GQL, GRPC, Architecture hexagonale, DDD" },
+          { categorie: "Pratiques", content: "Agile (Scrum, Kanban), SOLID, TDD, " },
           { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
-          { categorie: "Bases de données", content: "MySQL, MongoDB, ElasticSearch" },
+          { categorie: "Bases de données", content: "PSQL, MongoDB" },
         ],
       },
     };

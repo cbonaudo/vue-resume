@@ -30,9 +30,9 @@ export default {
   data() {
     return {
       contacts: [
-        { contents: ['8 Quai Jules Courmont', 'Lyon 02, France'], icon: 'address' },
+        { contents: ['43 rue Thomas Blanchet', 'Lyon 08, France'], icon: 'address' },
         { contents: ['06.95.36.70.43'], icon: 'phone' },
-        { contents: ['cedricbonaudo@gmail.com'], icon: 'email' },
+        { contents: ['cedric.bonaudo@iomentum.com'], icon: 'email' },
         { contents: ['http://github.com/cbonaudo/'], icon: 'www' },
       ],
     };

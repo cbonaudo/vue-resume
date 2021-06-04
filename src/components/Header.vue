@@ -6,7 +6,7 @@
       <span class="name">Cedric Bonaudo</span>
       <br />
       <!-- <span class="job-title">Javascript Developer</span> -->
-      <span class="job-title">Développeur Javascript</span>
+      <span class="job-title">Développeur Javascript/Rust</span>
     </h1>
 
     <!-- <h3 class="quote">
@@ -15,7 +15,7 @@
     </h3>-->
     <h3 class="quote">
       Travailler en équipe pour construire des applications complexes et utiles,
-      tout en améliorant mes connaissances de Javascript et de son écosystème.
+      tout en améliorant mes connaissances de Javascript, de Rust et de leurs écosystèmes.
     </h3>
   </div>
 </template>
@@ -40,7 +40,7 @@ h1 {
   margin: 0% 3% 0% 0%;
 }
 h3 {
-  margin: 0% 3% 0% 0%;
+  margin: 3% 3% 0% 0%;
 }
 .name {
   font-size: 1.2em;
