@@ -1,10 +1,9 @@
 <template>
   <div class="skills component">
-    <h2>Main Skills</h2>
-    <!-- <h2>Compétences principales</h2> -->
+    <h2>{{getLang == "fr" ? "Compétences principales" : "Main Skills"}}</h2>
     <div class="component-content">
       <div id="mask"></div>
-      <ul v-for="skill in skills.EN" :key="skill.id">
+      <ul v-for="skill in skills[getLang]" :key="skill.id">
         <li>
           <span class="title">{{ skill.categorie }} :</span>
           <br />
@@ -21,7 +20,7 @@ export default {
   data() {
     return {
       skills: {
-        EN: [
+        en: [
           {
             categorie: "Functional",
             content: "Teamwork, Organisation, Reassessment, Teaching, Learning",
@@ -33,7 +32,7 @@ export default {
           { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
           { categorie: "Databases", content: "MySQL, MongoDB" },
         ],
-        FR: [
+        fr: [
           {
             categorie: "Fonctionnelles",
             content:
@@ -48,6 +47,11 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    getLang() {
+      return this.$route.params.lang == "fr" ? "fr" : "en";
+    },
   },
 };
 </script>

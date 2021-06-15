@@ -1,11 +1,10 @@
 <template>
   <div class="interests component">
-    <h2>Interests</h2>
-    <!-- <h2>Hobbies</h2> -->
+    <h2>{{ getLang == "fr" ? "Hobbies" : "Interests"}}</h2>
     <div class="component-content">
       <div id="mask"></div>
       <table>
-        <tr v-for="interest in interests.EN" :key="interest.id">
+        <tr v-for="interest in interests[getLang]" :key="interest.id">
           <td>
             <img class="icon" v-bind:src="getIcon(interest.icon)" />
           </td>
@@ -21,23 +20,17 @@
 <script>
 export default {
   name: "Interests",
-  methods: {
-    getIcon(path) {
-      const images = require.context("../assets/interests");
-      return images(`./${path}.png`);
-    },
-  },
   data() {
     return {
       interests: {
-        EN: [
+        en: [
           { contents: ["Music : Bass, Guitar, Piano, Saxophone"], icon: "music" },
           { contents: ["Bike, Running"], icon: "bike" },
           { contents: ["Cooking"], icon: "cooking" },
           { contents: ["Language Learning"], icon: "language" },
           { contents: ["Video Games"], icon: "games" },
         ],
-        FR: [
+        fr: [
           { contents: ["Musique : Bass, Guitar, Piano, Saxophone"], icon: "music" },
           { contents: ["Vélo, Course"], icon: "bike" },
           { contents: ["Cuisine"], icon: "cooking" },
@@ -46,6 +39,17 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    getLang() {
+      return this.$route.params.lang == "fr" ? "fr" : "en";
+    },
+  },
+  methods: {
+    getIcon(path) {
+      const images = require.context("../assets/interests");
+      return images(`./${path}.png`);
+    },
   },
 };
 </script>

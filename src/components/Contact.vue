@@ -1,7 +1,6 @@
 <template>
   <div class="contact component">
-    <h2>Contact Me</h2>
-    <!-- <h2>Me Contacter</h2> -->
+    <h2>{{ getLang === "fr" ? "Me Contacter": "Contact Me" }} </h2>
     <div class="component-content">
       <div id="mask"></div>
       <table>
@@ -20,22 +19,27 @@
 
 <script>
 export default {
-  name: 'Experiences',
-  methods: {
-    getIcon(path) {
-      const images = require.context('../assets/contacts');
-      return images(`./${path}.png`);
-    },
-  },
+  name: "Experiences",
   data() {
     return {
       contacts: [
-        { contents: ['43 rue Thomas Blanchet', 'Lyon 08, France'], icon: 'address' },
-        { contents: ['06.95.36.70.43'], icon: 'phone' },
-        { contents: ['cedric.bonaudo@iomentum.com'], icon: 'email' },
-        { contents: ['http://github.com/cbonaudo/'], icon: 'www' },
+        { contents: ["43 rue Thomas Blanchet", "Lyon 08, France"], icon: "address" },
+        { contents: ["06.95.36.70.43"], icon: "phone" },
+        { contents: ["cedric.bonaudo@iomentum.com"], icon: "email" },
+        { contents: ["http://github.com/cbonaudo/"], icon: "www" },
       ],
     };
+  },
+  computed: {
+    getLang() {
+      return this.$route.params.lang;
+    },
+  },
+  methods: {
+    getIcon(path) {
+      const images = require.context("../assets/contacts");
+      return images(`./${path}.png`);
+    },
   },
 };
 </script>

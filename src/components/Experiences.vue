@@ -3,7 +3,7 @@
     <h2>Experiences</h2>
     <div class="component-content">
       <div id="mask"></div>
-      <ul v-for="experience in experiences.EN" :key="experience.id">
+      <ul v-for="experience in experiences[getLang]" :key="experience.id">
         <li class="occupation">
           <span class="place">{{ experience.place }}</span> -
           <span class="title">{{ experience.title }}</span>
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       experiences: {
-        EN: [
+        en: [
           {
             place: "IOmentum",
             title: "Rust Developper",
@@ -45,7 +45,7 @@ export default {
               "Creation and Maintenance of backoffice applications for the Salto and 6play platform (VueJS)",
               "Focus on resillience and reusability, through Functional/Unit testing, Documentation, Design System, Accessibility, Responsiveness & Version upgrades",
               "Scripts and packages creation (NodeJS, Github, Slack)",
-              "Agile/Scrumban environment and Retrospective animation"
+              "Agile/Scrumban environment and Retrospective animation",
             ],
           },
           {
@@ -83,7 +83,7 @@ export default {
             ],
           },
         ],
-        FR: [
+        fr: [
           {
             place: "Bedrock",
             title: "Développeur Javascript",
@@ -92,7 +92,7 @@ export default {
               "Création et Maintenance d'applications backoffice pour la plate-forme Salto et 6play (VueJS)",
               "Focus sur la résilience et la réutilisabilité, via Tests fonctionnels, Documentation, Design System, Accessibilité, Responsiveness & Montée de version",
               "Création de scripts et de packages (NodeJS, Github, Slack)",
-              "Environnement Agile/Scrum et Animation de rétrospectives"
+              "Environnement Agile/Scrum et Animation de rétrospectives",
             ],
           },
           {
@@ -146,6 +146,11 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    getLang() {
+      return this.$route.params.lang == "fr" ? "fr" : "en";
+    },
   },
 };
 </script>

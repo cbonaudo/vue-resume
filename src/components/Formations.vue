@@ -1,10 +1,9 @@
 <template>
   <div class="formations component">
-    <!-- <h2>Education</h2> -->
-    <h2>Formation</h2>
+    <h2>{{ getLang == "fr" ? "Formation": "Education" }}</h2>
     <div class="component-content">
       <div id="mask"></div>
-      <ul v-for="formation in formations.EN" :key="formation.id">
+      <ul v-for="formation in formations[getLang]" :key="formation.id">
         <li class="occupation">
           <span class="place">{{ formation.place }}</span> -
           <span class="title">{{ formation.title }}</span>
@@ -26,7 +25,7 @@ export default {
   data() {
     return {
       formations: {
-        EN: [
+        en: [
           {
             place: "Isitech",
             title: "Master's Degree in Computer Science",
@@ -37,7 +36,7 @@ export default {
             ],
           },
         ],
-        FR: [
+        fr: [
           {
             place: "Isitech",
             title: "Master - Expert en Systèmes d'Information",
@@ -50,6 +49,11 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    getLang() {
+      return this.$route.params.lang == "fr" ? "fr" : "en";
+    },
   },
 };
 </script>

@@ -5,24 +5,27 @@
     <h1>
       <span class="name">Cedric Bonaudo</span>
       <br />
-      <span class="job-title">Rust/Javascript Developer</span>
-      <!-- <span class="job-title">Développeur Rust/Javascript</span> -->
+      <span class="job-title">{{ getLang == "fr" ? "Développeur Rust/Javascript" : "Rust/Javascript Developer" }}</span>
     </h1>
 
     <h3 class="quote">
-      Working with people to build helpful and complex applications,
-      while perfecting my knowledge of Rust, Javascript and their ecosystem.
+      {{ getLang == "fr" ? 
+      `Travailler en équipe pour construire des applications complexes et utiles,
+      tout en améliorant mes connaissances de Rust, Javascript et de leurs écosystèmes.` :
+      `Working with people to build helpful and complex applications,
+      while perfecting my knowledge of Rust, Javascript and their ecosystem.` }}
     </h3>
-    <!-- <h3 class="quote">
-      Travailler en équipe pour construire des applications complexes et utiles,
-      tout en améliorant mes connaissances de Rust, Javascript et de leurs écosystèmes.
-    </h3> -->
   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
+  computed: {
+    getLang() {
+      return this.$route.params.lang == "fr" ? "fr" : "en";
+    },
+  },
 };
 </script>
 
