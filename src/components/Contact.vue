@@ -1,7 +1,7 @@
 <template>
   <div class="contact component">
-    <!-- <h2>Contact Me</h2> -->
-    <h2>Me Contacter</h2>
+    <h2>Contact Me</h2>
+    <!-- <h2>Me Contacter</h2> -->
     <div class="component-content">
       <div id="mask"></div>
       <table>

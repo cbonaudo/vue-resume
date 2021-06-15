@@ -1,9 +1,10 @@
 <template>
   <div class="skills component">
     <h2>Main Skills</h2>
+    <!-- <h2>Compétences principales</h2> -->
     <div class="component-content">
       <div id="mask"></div>
-      <ul v-for="skill in skills.FR" :key="skill.id">
+      <ul v-for="skill in skills.EN" :key="skill.id">
         <li>
           <span class="title">{{ skill.categorie }} :</span>
           <br />
@@ -25,10 +26,12 @@ export default {
             categorie: "Functional",
             content: "Teamwork, Organisation, Reassessment, Teaching, Learning",
           },
-          { categorie: "Javascript", content: "Angular, Vue, Node, React, Express, Jest" },
+          { categorie: "Architecture", content: "Rest, GQL, GRPC, Hexagonal architecture, DDD" },
+          { categorie: "Rust", content: "Tokio, Bastion, Warp, Async-graphql" },
+          { categorie: "Javascript", content: "Vue, React, Jest, Node, Express" },
           { categorie: "Practices", content: "Agile (Scrum, Kanban), SOLID, TDD" },
           { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
-          { categorie: "Databases", content: "MySQL, MongoDB, ElasticSearch" },
+          { categorie: "Databases", content: "MySQL, MongoDB" },
         ],
         FR: [
           {
@@ -39,7 +42,7 @@ export default {
           { categorie: "Rust", content: "Tokio, Bastion, Warp, Async-graphql" },
           { categorie: "Javascript", content: "Vue, React, Jest, Node, Express" },
           { categorie: "Architecture", content: "Rest, GQL, GRPC, Architecture hexagonale, DDD" },
-          { categorie: "Pratiques", content: "Agile (Scrum, Kanban), SOLID, TDD, " },
+          { categorie: "Pratiques", content: "Agile (Scrum, Kanban), SOLID, TDD" },
           { categorie: "CI/CD", content: "Github, Gitlab, CircleCI, Docker" },
           { categorie: "Bases de données", content: "PSQL, MongoDB" },
         ],
@@ -48,7 +51,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

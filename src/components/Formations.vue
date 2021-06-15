@@ -4,7 +4,7 @@
     <h2>Formation</h2>
     <div class="component-content">
       <div id="mask"></div>
-      <ul v-for="formation in formations.FR" :key="formation.id">
+      <ul v-for="formation in formations.EN" :key="formation.id">
         <li class="occupation">
           <span class="place">{{ formation.place }}</span> -
           <span class="title">{{ formation.title }}</span>

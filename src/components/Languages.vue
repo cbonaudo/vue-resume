@@ -1,11 +1,11 @@
 <template>
   <div class="languages component">
-    <!-- <h2>Languages</h2> -->
-    <h2>Langues</h2>
+    <h2>Languages</h2>
+    <!-- <h2>Langues</h2> -->
     <div class="component-content">
       <div id="mask"></div>
       <table>
-        <tr v-for="language in languages.FR" :key="language.id">
+        <tr v-for="language in languages.EN" :key="language.id">
           <td>
             <img class="icon" v-bind:src="getIcon(language.icon)" />
           </td>

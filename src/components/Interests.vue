@@ -1,11 +1,11 @@
 <template>
   <div class="interests component">
-    <!-- <h2>Interests</h2> -->
-    <h2>Hobbies</h2>
+    <h2>Interests</h2>
+    <!-- <h2>Hobbies</h2> -->
     <div class="component-content">
       <div id="mask"></div>
       <table>
-        <tr v-for="interest in interests.FR" :key="interest.id">
+        <tr v-for="interest in interests.EN" :key="interest.id">
           <td>
             <img class="icon" v-bind:src="getIcon(interest.icon)" />
           </td>
